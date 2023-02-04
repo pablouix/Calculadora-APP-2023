@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraApp.MainPage">
+
+    <AbsoluteLayout >
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,.32" 
+                     AbsoluteLayout.LayoutFlags="All"
+                     Padding="24,0" Spacing="0"
+                     HorizontalOptions="End" VerticalOptions="End">
+
+            <Label Padding="16,0" HorizontalOptions="End">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span x:Name="operacionMat" Text="12+12" FontSize="36" TextColor="Black"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label x:Name="resultadoOperacion" HorizontalOptions="End" VerticalOptions="End" Text="24" TextColor="Black"
+                   Margin="0,0,16,0" FontSize="69" FontAttributes="None" />
+
+        </StackLayout>
+
+
+        <Frame AbsoluteLayout.LayoutBounds="0,1, 1, .1" AbsoluteLayout.LayoutFlags="SizeProportional,YProportional"  BackgroundColor="#239CFF"/>
+
+        <Frame AbsoluteLayout.LayoutBounds="0,1,1,.62" AbsoluteLayout.LayoutFlags="SizeProportional,YProportional"
+               BackgroundColor="#239CFF" HasShadow="False" CornerRadius="4">
+
+
+            <Grid AbsoluteLayout.LayoutBounds="0,1,1,.62 " AbsoluteLayout.LayoutFlags="SizeProportional,YProportional"
+                  RowDefinitions="*,*,*,*,*" ColumnDefinitions="*,*,*,*" Padding="10" RowSpacing="4" ColumnSpacing="4">
+
+                <Frame Grid.Column="0" Grid.Row="0" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="AC" 
+                            FontSize="20" 
+                            BackgroundColor="#FFC314" 
+                            TextColor="White" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnAC"/>
+                </Frame>
+
+                <Frame Grid.Column="1" Grid.Row="0" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="±" 
+                            FontSize="20" 
+                            BackgroundColor="#FFC314" 
+                            TextColor="White" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnMasMenos"/>
+                </Frame>
+
+                <Frame Grid.Column="2" Grid.Row="0" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="%" 
+                            FontSize="20" 
+                            BackgroundColor="#FFC314" 
+                            TextColor="White" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnPorcentaje"/>
+                </Frame>
+
+                <Frame Grid.Column="3" Grid.Row="0" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="÷" 
+                            FontSize="20" 
+                            BackgroundColor="#E2F3FD" 
+                            TextColor="#2F4E74" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnDivicion"/>
+                </Frame>
+
+
+                <Frame Grid.Column="0" Grid.Row="1" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="7"
+                            FontSize="20" 
+                            BackgroundColor="#2F4E74" 
+                            TextColor="White" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnSiete"/>
+                </Frame>
+
+                <Frame Grid.Column="1" Grid.Row="1" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="8" 
+                            FontSize="20" 
+                            BackgroundColor="#2F4E74" 
+                            TextColor="White" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnOcho"/>
+                </Frame>
+
+                <Frame Grid.Column="2" Grid.Row="1" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="9" 
+                            FontSize="20" 
+                            BackgroundColor="#2F4E74" 
+                            TextColor="White" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnNueve"/>
+                </Frame>
+
+                <Frame Grid.Column="3" Grid.Row="1" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="x" 
+                            FontSize="17" 
+                            BackgroundColor="#E2F3FD" 
+                            TextColor="#2F4E74" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnMultiplicar"/>
+                </Frame>
+
+
+
+                <Frame Grid.Column="0" Grid.Row="2" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="4" 
+                            FontSize="20" 
+                            BackgroundColor="#2F4E74" 
+                            TextColor="White" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnCuatro"/>
+                </Frame>
+
+                <Frame Grid.Column="1" Grid.Row="2" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="5" 
+                            FontSize="20" 
+                            BackgroundColor="#2F4E74" 
+                            TextColor="White" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnCinco"/>
+                </Frame>
+
+                <Frame Grid.Column="2" Grid.Row="2" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="6" 
+                            FontSize="20" 
+                            BackgroundColor="#2F4E74" 
+                            TextColor="White" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnSeis"/>
+                </Frame>
+
+                <Frame Grid.Column="3" Grid.Row="2" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="-" 
+                            FontSize="20" 
+                            BackgroundColor="#E2F3FD" 
+                            TextColor="#2F4E74" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnMenos"/>
+                </Frame>
+
+
+                <Frame Grid.Column="0" Grid.Row="3" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="1" 
+                            FontSize="20" 
+                            BackgroundColor="#2F4E74" 
+                            TextColor="White" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnUno"/>
+                </Frame>
+
+                <Frame Grid.Column="1" Grid.Row="3" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="2" 
+                            FontSize="20" 
+                            BackgroundColor="#2F4E74" 
+                            TextColor="White" 
+                            VerticalOptions="Fill"
+                            Clicked="btnDos"/>
+                </Frame>
+
+                <Frame Grid.Column="2" Grid.Row="3" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="3" 
+                            FontSize="20" 
+                            BackgroundColor="#2F4E74" 
+                            TextColor="White" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnTres"/>
+                </Frame>
+
+                <Frame Grid.Column="3" Grid.Row="3" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="+" 
+                            FontSize="20" 
+                            BackgroundColor="#E2F3FD" 
+                            TextColor="#2F4E74" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnSuma"/>
+                </Frame>
+
+
+
+                <Frame Grid.Column="0" Grid.Row="4" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="0" 
+                            FontSize="20" 
+                            BackgroundColor="#2F4E74" 
+                            TextColor="White" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnCero"/>
+                </Frame>
+
+                <Frame Grid.Column="1" Grid.Row="4" Padding="0" Margin="4" CornerRadius="3" >
+                    <Button Text="." 
+                            FontSize="20" 
+                            BackgroundColor="#2F4E74" 
+                            TextColor="White" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnPunto"/>
+                </Frame>
+
+                <Frame  Grid.Column="2" Grid.ColumnSpan="2"  Grid.Row="4" Padding="0" Margin="4" CornerRadius="3">
+                    <Button Text="=" 
+                            FontSize="20" 
+                            BackgroundColor="#E2F3FD" 
+                            TextColor="#2F4E74" 
+                            VerticalOptions="Fill" 
+                            Clicked="btnIgual"/>
+                </Frame>
+
+            </Grid>
+
+
+        </Frame>
+    </AbsoluteLayout>
+
+
+
+</ContentPage>
